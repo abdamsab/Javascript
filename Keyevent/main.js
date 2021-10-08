@@ -1,5 +1,5 @@
-var selectContainer = document.getElementById('container');
-console.log(selectContainer)
+//var selectContainer = document.getElementById('container');
+//console.log(selectContainer)
 
 
 document.body.addEventListener('keydown', function(e){
