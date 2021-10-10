@@ -1,3 +1,62 @@
 body {
     font-size: 15pt;
+    background: url(https://i.imgur.com/mSPU63U.jpg);
+    
+}
+
+#container {
+  width: 45vw;
+  height: 45vh;
+  background-color: rgb(0, 0, 0, 0.5);
+  margin-top: 0px;
+  margin-left: 25%;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  align-content:center;
+}
+
+#display-output {
+  /*font-size: 30px;*/
+  height: 80px;
+  background-color: white;
+  padding: 16px;
+}
+
+.screen{
+  height: 75%;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: right;
+}
+
+#keyarea {
+  width: 40vw;
+  /*min-height: 40vh;*/
+  background-color: black;
+  justify-content: center;
+  align-content: center;
+  margin-right: 10px;
+  box-sizing: border-box;
+  padding: 32px;
+  display: grid;
+  grid: 150px / auto auto auto auto
+} 
+
+.keys {
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(0, 0, 0, 0.2);
+  margin-right: 12px;
+  margin-bottom: 12px;
+  padding: 32px;
+  font-size: 24px;
+  text-align: center;
+  color: white;
+  box-shadow: 0px 4px 4px;
 }
