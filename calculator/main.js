@@ -10,6 +10,9 @@ class Cal {
     this.currentInput = ''
     this.previousInput = ''
     this.action = undefined
+    this.currAfter =''
+    this.prevAfter= ''
+    this.afterAction = ''
   }
   
   conca_number(num){
@@ -21,15 +24,18 @@ class Cal {
   output_display(){
     this.currDisplayElement.innerText = this.currentInput
     if(this.action != null){
-      this.prevDisplayElement.innerText = this.previousInput.toString() + this.action.toString()
+      this.prevDisplayElement.innerText = this.previousInput.toString() +' '+ this.action.toString()
     }
     else{
-      this.prevDisplayElement.innerText = ''
+      this.prevDisplayElement.innerText = this.prevAfter.toString() +' '+ this.afterAction.toString() + ' ' + this.currAfter.toString()
     }
   }
   
   performOperation(){
     let result
+    this.currAfter = this.currentInput
+    this.afterAction = this.action
+    this.prevAfter = this.previousInput
     
     const currInput = parseInt(this.currentInput)
     console.log('current int val=> ', currInput)
@@ -54,7 +60,7 @@ class Cal {
         return
     }
     console.log('compute result=> ', result)
-    this.equalInput = currInput
+    
     this.currentInput = result
     this.action = undefined
     this.previousInput = ''
@@ -85,10 +91,10 @@ const currDisplayElement = document.querySelector('[curr-operand]')
 
 const cal = new Cal (prevDisplayElement, currDisplayElement)
 
-console.log(numButton)
-console.log(opButton)
-console.log(cancelButton)
-console.log(equalButton)
+//console.log(numButton)
+//console.log(opButton)
+//console.log(cancelButton)
+//console.log(equalButton)
 
 numButton.forEach(button => {
   button.addEventListener('click', ()=> {
